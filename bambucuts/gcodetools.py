@@ -41,7 +41,7 @@ except ImportError:
 @dataclass
 class CuttingParameters:
     """Configuration parameters for cutting operations."""
-    material_thickness: float = 0.2  # mm
+    material_thickness: float = 5.0  # mm
     number_of_passes: int = 1
     knife_force: float = 100.0  # grams
     movement_speed: float = 10000.0  # mm/min
@@ -371,7 +371,7 @@ class KnifeInterface(interfaces.Gcode):
         """Set origin position."""
         return f"G92 X{x} Y{y}"
     
-    def rapid_move(self, x, y):
+    def rapid_move(self, x, y, z):
         """Rapid positioning move."""
         # Apply coordinate transformation if needed
         transformed_x, transformed_y = self.transform_coordinates(x, y)
@@ -417,11 +417,11 @@ class KnifeInterface(interfaces.Gcode):
     
     def get_origin_setting_command(self):
         """Get G92 command to set origin to current position."""
-        return "G92 X0 Y0 ; Set current position as origin"
+        return "G92 X0 Y0 Z5.2 ; Set current position as origin"
     
     def get_home_command(self):
         """Get command to move toolhead back to origin (0,0) with Z lift."""
-        return "G0 Z50 ; Lift to safe height\nG0 X0 Y0 ; Move back to origin"
+        return "G0 Z5 ; Lift to safe height\nG0 X0 Y0 ; Move back to origin"
 
 
 class GCodeTools:

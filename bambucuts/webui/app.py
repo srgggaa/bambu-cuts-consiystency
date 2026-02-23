@@ -880,7 +880,7 @@ def convert_to_gcode():
 
         # Convert SVG to G-code
         params = CuttingParameters(
-            material_thickness=0.0,  # For plotting, no Z depth
+            material_thickness=5.0,  # For plotting, no Z depth
             cutting_speed=1000.0,
             movement_speed=3000.0,
             join_paths=True,
