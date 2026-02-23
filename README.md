@@ -1,3 +1,6 @@
+# WARNING THIS FORK IS VERRY WIP 
+
+
 # Bambu Cuts - Cutter and Plotter for Bambu Lab Printers
 
 Control your Bambu Lab 3D printer as a CNC cutter or plotter. Convert SVG/DXF files to G-code and execute them with a web-based control interface.
@@ -10,8 +13,6 @@ This can brake your printer, or you, or your cat, or all of the above. Especiall
 
 The origin of the print is at the current tool head position for X and Y. 
 The Z=0 is set with the jogger, always make sure the Z is correctly zeroes. Otherwise it can plunge the knife into the print bed.
-
-The printer needs to be in LAN mode with developer options enabled, or run an older firmware (1.0.4 worked for me)
 
 
 ## Demo
@@ -51,13 +52,9 @@ Parts:
 
 ## Features
 
-![Web UI Screenshot](docs/gui.jpg)
+![Web UI Screenshot](docs/gui.jpg) 
 
-
-- 🎮 **Web-based Control Interface** - Jog controls, G-code editor, and live monitoring
 - ✂️ **SVG/DXF to G-code Conversion** - Convert vector graphics to cutting paths
-
-
 
 
 ![Cutter Cross-Section](docs/cutter crosssection.jpeg)
@@ -82,11 +79,6 @@ pip install -e .
 ## Quick Start
 
 ### Option 1: Run Without Installing (Development)
-
-**Quick Start (Linux/Mac):**
-```bash
-./run.sh
-```
 
 **Manual Setup:**
 ```bash
