@@ -13,11 +13,6 @@ The Z=0 is set with the jogger, always make sure the Z is correctly zeroes. Othe
 
 The printer needs to be in LAN mode with developer options enabled, or run an older firmware (1.0.4 worked for me)
 
-## TLDR
-   ```
-   pip install git+https://github.com/unrelatedlabs/bambu-cuts.git
-   bambucuts server
-   ```
 
 ## Demo
 
